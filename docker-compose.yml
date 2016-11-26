@@ -1,0 +1,25 @@
+app-web:
+   build: ./web
+   ports:
+      - "8081:8080"
+   links:
+     - srv-postgres
+   volumes:
+      - /usr/local/tomcat/webapps
+
+srv-postgres:
+   build: ./db
+   expose:
+      - "5432"
+   volumes_from:
+      - storage-db-data
+   environment:
+      - POSTGRES_USER=louis
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=louis
+
+storage-db-data:
+   image: busybox
+   command: echo 'Conteneur pour persistance de PostgreSQL.'
+   volumes:
+      - /usr/local/var/postgres/data
