@@ -1,4 +1,4 @@
-**Notes**
+**tomcat-postgres**
 
 Attention j'ai utilisé la dernière version de Postgres(9.6.1) ainsi que la dernière version de Tomcat(Apache Tomcat/9.0.0.M13).
 
@@ -15,3 +15,5 @@ Pour mettre en place le stack simplement entrer la commande suivante lorsque vou
 ```sh
  $ ./re-build.sh
 ```
+
+Dans votre fureteur acccéder à l'URL suivante: **[http://localhost:8081/groovy/bd.groovy](http://localhost:8081/groovy/bd.groovy)**
